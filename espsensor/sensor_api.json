@@ -1,0 +1,60 @@
+{
+    "nodeName" : "01",
+    "esp11" : {
+        "topic" : "01/1/esp11",
+        "status" : 0 , 
+        "SoilMoistureSensor1" : 0,
+        "LightSensor" : 0
+    },
+    "esp12" : {
+        "topic" : "01/1/esp12",
+        "status" : 0,
+        "SoilMoistureSensor1" : 0,
+        "SoilMoistureSensor2" : 0
+    },
+    "esp21" : {
+        "topic" : "01/2/esp21",
+        "status" : 0,
+        "SoilMoistureSensor1" : 0,
+        "Co2" : 0,
+        "TempSensor" : 0,
+        "HumiSensor" : 0
+    },
+    "esp22" : {
+        "topic" : "01/2/esp22",
+        "status" : 0,
+        "SoilMoistureSensor1" : 0,
+        "SoilMoistureSensor2": 0
+    },
+    "esp31" : {
+        "topic" : "01/3/esp31",
+        "status" : 0,
+        "SoilMoistureSensor1" : 0 ,
+        "LightSensor" : 0,
+        "AirSensor" : {
+            "PM25" : 0 
+        }
+    },
+    "esp32" : {
+        "topic" : "01/3/esp32",
+        "status" : 0,
+        "SoilMoistureSensor1" : 0,
+        "SoilMoistureSensor2" : 0
+    },
+    "esp41" : {
+        "topic" : "01/4/esp41",
+        "status" : 0,
+        "SoilMoistureSensor1" : 0,
+        "Co2" : 0,
+        "TempSensor" : 0.0,
+        "HumiSensor" : 0
+    },
+    "esp42" : {
+        "topic" : "01/4/esp42",
+        "status" : 0,
+        "SoilMoistureSensor1" : 0,
+        "SoilMoistureSensor2" : 0,
+        "TempSensor" : 0.0 , 
+        "HumiSensor" : 0
+    }
+}
