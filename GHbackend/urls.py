@@ -15,16 +15,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.db.models import base
-from django.urls import path
-from django.conf.urls import url , include 
+from django.urls import path 
+from django.conf.urls import include 
 from rest_framework.routers import DefaultRouter
 from espsensor import views
 
 router = DefaultRouter()
-router.register(r'ESP' , views.ESPViewSet)
+router.register(r'GH' , views.GreenViewSet)
 
 
 urlpatterns = [
+    path("api/sensor/<int:nodename>",views.api_sensor , name = "給感測器傳值使用"),
+    path("api/now/<int:nodename>/<int:esp>" , views.api_now , name = "現在某個特定esp 資料"),
+    path("api/history/<int:nodename>/<int:esp>" , views.api_history , name = "過去某個特定esp 資料"),
+    path("api/history/<int:nodename>/<int:esp>/<int:datestart>/<int:dateend>" , views.api_history , name = "過去某區間esp資料"),
     path('admin/', admin.site.urls),
-    path('api/' , include(router.urls)),
+    # path('api/' , include(router.urls)),
 ]

@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-a38m^+4ye6cgh3hhbi732wyup)l-*^457-gc@@b0l89)x)3#z*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'corsheaders',
     'espsensor'    
 ]
 
@@ -49,6 +50,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware'
 ]
 
 ROOT_URLCONF = 'GHbackend.urls'
@@ -79,9 +82,9 @@ DATABASES = {
     'default': {
        'ENGINE' : 'django.db.backends.mysql',
        'NAME' : 'gh_db',
-       'USER' : 'superuser',
+       'USER' : 'admin',
        'PASSWORD' : 'nemu8718',
-       'HOST' : 'localhost',
+       'HOST' : '192.168.40.41',
        'PORT' : '3306'
     }
 }
@@ -129,3 +132,5 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CORS_ALLOW_ALL_ORIGINS = True 
